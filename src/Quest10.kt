@@ -32,13 +32,12 @@ fun addCity() {
 }
 
 fun seeList() {
-    cities.forEach {
-        println(it)
-    }
+    for (city in cities)
+        println(city)
 }
 
 fun seeUnicalList() {
-    cities.stream().distinct().forEach {
-        println(it)
-    }
+    val distinctCities: List<String> = cities.distinct()
+    for (city in distinctCities)
+        println(city)
 }
